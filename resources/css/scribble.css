@@ -1,0 +1,35 @@
+/*@import url(http://fonts.googleapis.com/css?family=Titillium+Web:300);*/
+
+/*html {*/
+	/*font-family: 'Titillium Web', sans-serif;*/
+/*}*/
+
+/*body {*/
+    /*background: url("../img/bg_noise.jpg") repeat fixed;*/
+    /*text-align: center;*/
+    /*padding: 20px;*/
+/*}*/
+
+/*footer {*/
+  /*position: absolute;*/
+  /*bottom: 10px;*/
+  /*width: 100%;*/
+/*}*/
+
+/*#playgrid {*/
+    /*width: 800px;*/
+    /*height: 800px;*/
+    /*width: 80em;*/
+/*}*/
+
+/*#playgrid > .row-fluid {*/
+    /*margin: 50% 50% auto;*/
+    /*max-width: 40%;*/
+/*}*/
+
+#playgrid img {
+    width: 100%;
+    height: 100%;
+    border: solid 1px black;
+    margin-bottom: 20px;
+}

@@ -26,7 +26,14 @@ $app['assetic.filter_manager'] = $app->share(
 );
 
 $app->get('/', function() use ($app) {
-    return $app['twig']->render('hello.twig');
+
+    // load the image map
+    $images = file_get_contents(__DIR__ . '/assets/scribble/images.json');
+    $images = json_decode($images);
+
+    return $app['twig']->render('index.twig', array(
+        'images' => $images->dummy // we have one image set only right now
+    ));
 });
 
 $app->run();

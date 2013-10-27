@@ -84,6 +84,20 @@
 
         </div>
 
+
+        <div class="modal about hide fade">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3>About</h3>
+            </div>
+            <div class="modal-body">
+                <p>Y u follow me?</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="go-away btn btn-primary">Go away</a>
+            </div>
+        </div>
+
     </div> <!-- /container -->
 
     <script src="assets/js/jquery-1.10.2.min.js"></script>
@@ -91,6 +105,19 @@
     <script src="assets/lib/underscore/1.4.3/underscore.js"></script>
     <script src="assets/lib/backbone/1.0.0/backbone-min.js"></script>
     <script src="assets/scribble/scribble.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("a[href='#about']").click(function(event){
+                event.preventDefault();
+                $('.about.modal').modal();
+            });
+
+            $('.go-away').click(function(){
+                window.location.href = 'http://slopjong.de';
+            });
+        });
+    </script>
 
 </body>
 </html>

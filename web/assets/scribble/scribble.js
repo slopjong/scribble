@@ -9,7 +9,7 @@ var ScoreModel = Backbone.Model.extend({
 
     setScore: function(score) {
         this.set({score: score});
-        console.log('Score is now ' + this.get('score'));
+//        console.log('Score is now ' + this.get('score'));
     },
 
     addScore: function(score) {
@@ -45,7 +45,7 @@ var ScribbleView = Backbone.View.extend({
     },
 
     getScore: function() {
-        console.log(this.model);
+//        console.log(this.model);
         return this.model.get('score');
     },
 
@@ -66,7 +66,7 @@ var ScribbleView = Backbone.View.extend({
 
 var Game = Backbone.View.extend({
 
-    model: new ScoreModel(),
+    score: new ScoreModel(),
     scoreLabel: $('#score'),
 
     initialize: function() {
@@ -107,6 +107,8 @@ var Game = Backbone.View.extend({
         for(i=0; i < this.scribbles.length; i++) {
             score += this.scribbles[i].getScore();
         }
+
+        this.score.addScore(score);
 
         this.scoreLabel.text(score);
     }
